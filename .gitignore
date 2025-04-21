@@ -1,0 +1,22 @@
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# PDF outputs
+*.pdf
+
+# Editor & OS files
+.vscode/
+.DS_Store
+
+# Build directories (if any)
+build/
+_build/
+EOF

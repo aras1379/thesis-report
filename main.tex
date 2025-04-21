@@ -1,0 +1,94 @@
+\documentclass[a4paper, 12pt]{report}
+
+% Required packages
+\usepackage{graphicx}         % For images
+\usepackage{hyperref}         % For clickable links
+\usepackage[english]{babel}   % Language settings
+\usepackage{csquotes}         % Required by biblatex
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fontspec}         % For custom fonts (XeLaTeX required)
+\usepackage{tikz}             % For drawing (e.g. logo placement)
+\usepackage{lipsum}           % For dummy text (optional)
+\usepackage{titlesec}         % For custom chapter styles
+\usepackage{float}  % Allows the [H] float placement specifier
+
+% Font settings
+\defaultfontfeatures{Ligatures=TeX}
+% \setmainfont{Crimson}       % Optional custom font
+
+% Bibliography
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{mybiblio.bib} % ✅ Make sure file name matches and is in same folder
+
+% Chapter formatting
+\titleformat{\chapter}[display]
+  {\bfseries\huge\filright}{}{0pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{10pt}{30pt}
+
+% Metadata
+\title{new-thesis-sj}
+\author{Sara Ljung}
+\date{April 2025}
+
+\begin{document}
+\pagenumbering{arabic}
+\selectlanguage{english}
+
+%% ------------------ TITLE PAGE ------------------
+\vspace{6cm}
+\begin{titlepage}
+    \thispagestyle{empty} % Remove page number
+
+    % JU logo in top-right corner
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=north east, xshift=-2cm, yshift=-2cm] at (current page.north east) {
+            \includegraphics[width=4cm]{png/JU_A.png}
+        };
+    \end{tikzpicture}
+
+    \vspace*{6cm}
+    \begin{center}
+        \fontsize{30pt}{38pt}\selectfont\bfseries
+        Exploring AI-Based Emotion \\
+        Recognition in Swedish: \\
+        Speech, Text, and Vocal Markers
+    \end{center}
+
+    \vfill
+    
+    \textbf{Author(s):} Sara LJUNG \&{} Janna HAKKARAINEN \\  % ✅ \&{} is correct usage
+    \textbf{Main subject area:} Computer Engineering \\
+    \textbf{School:} School of Engineering \\
+    \textbf{Date:} March 2025
+
+\end{titlepage}
+
+%% ------------------ BACK SIDE ------------------
+\newpage
+\vspace*{20cm}
+\noindent
+This final thesis has been carried out at the School of Engineering at J\"onk\"oping University within Computer Engineering. The authors are responsible for the presented opinions, conclusions and results.
+
+\vspace{0.5cm}
+
+\noindent\textbf{Examiner:} Neziha AKALIN \\
+\textbf{Supervisor:} Garrit SCHAAP \\
+\textbf{Scope:} 15 Credits \\
+\textbf{Date:} 2025-03-09
+
+%% ------------------ MAIN BODY ------------------
+\newpage
+\tableofcontents
+
+% Chapters
+\include{abstract}
+\include{introduction}
+\include{method}
+\include{theoretical-framework}
+\include{results}
+\include{discussion}
+\include{conclusions}
+
+%% ------------------ REFERENCES ------------------
+\printbibliography
+\end{document}
