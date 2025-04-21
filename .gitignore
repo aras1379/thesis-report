@@ -1,22 +1,23 @@
-# LaTeX intermediate files
+# LaTeX auxiliary files
 *.aux
-*.log
-*.out
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 *.toc
 *.lof
 *.lot
-*.fls
-*.fdb_latexmk
-*.synctex.gz
 
-# PDF outputs
+# PDF output
 *.pdf
 
-# Editor & OS files
+# Editor / OS
 .vscode/
 .DS_Store
 
-# Build directories (if any)
+# Build dirs (if any)
 build/
 _build/
-EOF
