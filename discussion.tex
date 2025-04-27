@@ -1,12 +1,88 @@
 \chapter{Discussion}
 \label{sec:discussion}
 
-\section{Result Discussion}
+\section{Result Discussion RQ1}
+For the first research question, this thesis investigated how AI models for speech recognition compare to existing research on vocal markers. More specifically, the goal is to assess whether the AI models align with the findings of the Swedish research on vocal markers done by Ekberg (Ekberg et al., 2023).
+ioioioioioioioioioioioioioi FIXA KÄLLORNA ioioioioioioioioioioioioioi
+\subsection{Interpretation of Results}
+\subsubsection{Vocal Features and Hume AI Emotion Scores}
+Correlations between different vocal markers (pitch, intensity, HNR, jitter and simmer) and Hume AI emotion labels, were visualized on a heatmap using Pearson correlation coefficients. Overall, low to very low correlations were found here, with only a few instances of what could be considered moderate correlations.  
+Where values closer to 1.0 for positive linear relationships or -1.0 for negative linear relationships would suggest a strong correlation, the heatmap showing the correlation between the vocal features and AI emotion scores from Hume AI primarily showed low numbers ranging from -0.44 as the lowest, to 0.34 as the highest. Some numbers appeared to have an extremely low correlation. For example, the correlation between sadness and shimmer was as low as 0.00, with other correlations hovering around being 0.01-0.04.
+This suggests a weak linear relationship between the vocal features mean pitch, mean intensity, mean HNR, jitter and simmer and the emotion labels from Hume AI, indicating that the AI model may not fully have captured the complex details from the vocal markers as well as the findings from Ekberg (Ekberg et al., 2023).
+
+Despite this, some of the results align with the findings of Ekberg (2023). 
+For example, in this analysis mean pitch with anger shows the value r = 0.26 while mean pitch with sadness gave the value r = -0.37. Ekberg’s research showed anger to have elevated pitch and while sadness had lower pitch than anger and happiness, so both studies show anger to be associated with elevated pitch and sadness to be associated with lower pitch.
+Looking at intensity, this analysis showed the value of joy to be r = 0.34, sadness r = -0.26, and surprise r = -0.39. In Ekberg’s study, happiness (joy) showed higher intensity while sadness and surprise showed patterns of lower intensity. Although these emotions show matching patterns, other emotions show mismatches. Ekberg’s study reported higher intensity for anger and fear, while the heatmap analysis in this study presents fear to have a minimal correlation (r = 0.01), while anger has a negative correlation (r = -0.18) with intensity, suggesting that intensity decreasing as anger increases.
+
+The findings for HNR only partially matched with the findings of Ekberg’s study which reported that fear and happiness were linked with higher HNR while sadness is associated to lower HNR. 
+In this study sadness showed a moderate negative correlation with HNR (r = -0.44), which is aligns with the Ekberg study. However, correlations for fear (r = 0.08) and joy (r = 0.06) were very weak, differing from the associations observed by Ekberg.
+Jitter showed no moderate or strong correlations with any emotions in this study, and shimmer proved to be slightly positive for joy (r = 0.19) and moderately negative for anger (r = -0.33) but not for surprise which was the only emotion in Ekberg’s study which had higher shimmer.
+
+Although some Pearson correlations presented in the heatmap showed consisting pattern with the Ekberg research and others diverged, it is important to note that there are methodological differences between this analysis and Ekberg’s research. Ekberg employed a different statistical approach using both simple and multiple logistic regression models to predict the emotions from speech. While Pearson correlation which was used for this analysis is useful for detecting linear associations, it might not have captured the complex non-linear interactions that the logistic regression models are able to capture.
+The weak correlations found in the heatmap showing the correlation between the vocal features and AI emotion scores from Hume AI might also suggest that the vocal features used in this analysis were insufficient in predicting the emotions in spontaneous speech. Where the research done by Ekberg (Ekberg et al., 2023) uses an acted dataset with repeated sentences, emotional expression in natural speech (e.g. interviews, which were used in this analysis) tends to be more subtle.
+
+\subsubsection{Praat-Based Emotion Scores}
+As for the second heatmap presented in the result, we see the correlations between vocal features and the emotion scores from the custom Praat-based categorization function. While the Pearson correlation values in this heatmap are seemingly stronger than with the Hume AI labels, these results may be misleading as they reflect an over-reliance on pitch and HNR, rather than authentic emotional differences.
+For instance, examining the highest correlations, pitch correlated strongly with fear (r = 0.93) and surprise (r = -0.90). HNR also demonstrated high correlations with fear (r = 0.92) and surprise (r = -0.90). 
+
+While the correlations here suggest a strong relationship between the emotional labels and the vocal features, this specific pattern indicates methodological limitations. The Praat-based categorization function appears to prioritize a narrow range of features (notably pitch and HNR), leading to inflated correlations that do not necessarily capture the complexity of emotional expression.
+
+The failure of accurately categorizing vocal emotions is likely due to the spontaneous nature of the interviews which unlike acted datasets where emotions are exaggerated, result in subtle emotional expression. The limited number of vocal features may also be a contributing factor as to why full emotional complexity was not captured, together with variability in recordings which potentially diluted the emotional markers across time.
+Contrary to theoretical expectations, the categorization failed to distinguish between the emotional states in a meaningful way as indicated by the lack of clear emotional differentiations. These findings suggest that although some acoustic features were captured effectively, the Praat-based function did not categorize the emotions accurately, potentially due to the speech being in a spontaneous interview format instead of, for example, an acted dataset. 
+
+\subsubsection{Custom Vocal Emotion Categorization Method}
+To assess the effectiveness of the custom emotion categorization function developed for this study, the outputs were compared to the Hume AI generated emotion scores.
+Despite individual vocal features having high correlations, the Praat-based emotion categorization function reveals significant limitations. With an average score of 0.2, the Praat based function presented minimal variability, suggesting that the function was unable to differentiate emotional expressions within the spontaneous speech obtained from the interviews.
+The Hume model demonstrated wider variations for the emotion scores, reflecting on a more nuanced detection of the different emotions. 
+Several factors likely contributed to this outcome as these results highlight the challenge of categorization in spontaneous speech. In real world emotional expressions, as opposed to acted ones, emotional signals are often more subtle and dependent on context. 
+The limited set of acoustic features may as well have excluded some important clues, further restricting the sensitivity of the function. All factors point to spontaneous speech potentially being too complex for this function.
+
+\subsubsection{ANOVA Vocal Features}
+To further investigate whether fundamental vocal features used in the previous analyses varied systematically across the five different AI-labeled emotions, an analysis of variance (ANOVA) was conducted. None of the results revealed any significant statistical differences for pitch, intensity, HNR, jitter or shimmer. This was further confirmed by Tukey HSD tests, suggesting that within the context of spontaneous speech obtained from the interviews, emotional states may not reliably be differentiated by average values of the core vocal features.
+Clear differences in acoustic features between emotions were reported by Ekberg (Ekberg et al., 2023), which contrasts with these findings, possibly due to the controlled nature of Ekberg’s acted dataset.
+The lack of variance for the present study likely reflects the subtle nature of emotional expressions in an interview format, being a natural conversational form of expression with some emotions possibly being interwoven with context and which may also have more variations from time to time.
+
+\subsubsection{Correlation Between Vocal Features and Hume AI Emotion Scores}
+Following the limitations identified with the rule-based emotion categorization, the analysis shifted to examining direct correlations between raw acoustic features and Hume AI’s emotion scores. 
+With a composite correlation analysis visualized, showing the two acoustic features pitch and intensity and the correlation with Pearson correlation coeﬀicients, generally weak correlations were found across all emotions. 
+However, some patterns aligned with established findings of Ekberg (Ekberg et al., 2023), where intensity showed a negative correlation with fear, sadness and surprise which bears some resemblance with the results of Ekberg’s study. Although pitch presented minor positive correlations with anger and fear, and happiness, these results alone suggest that average pitch and intensity alone are insufficient in capturing the complex nature of emotional expression made in spontaneous speech, as it remains too subtle. Although some expected relationships have been observed, emotions fluctuate dynamically within a clip, contributing to the difficulty of detecting consistent patterns through static averages of single features.
+
+\subsubsection{Observations from individual interviews}
+Analyses of individual interviews revealed results can give more clarity by analyzing a voice recording in its entirety combined with looking at peaks in specific moments. Where static measures often result in an average of emotions when analyzing an entire voice recording, segment analysis done from time to time shows more detailed emotional shifts. Although correlations are not entirely consistent throughout the recordings, the positive interview revealed increasing intensity corresponding with higher joy, whereas one of the negative voice recordings revealed peaks in pitch aligned with elevated anger scores. 
+There are several possible factors that can account for this result, one being that the emotional expression in natural conversations such as the interview format for this study is context driven with emotions fluctuating throughout the entire conversation. Static measurements take an average of all the peaks and fluctuations, likely resulting in a somewhat neutral end result, where datasets with acted recordings might not differ as much in one recording.
+These findings highlight the importance of analyzing emotions on a segment level rather than relying exclusively on an average for one whole clip. Looking at one clip at its entirety for a natural conversational clip gives the opportunity to inspect all emotional peaks and distinguish between different emotional states throughout the recording without emotions being averaged and neutralized.
+Furthermore some variability across individual speakers was observed demonstrating different vocal patterns suggesting that some personal vocal traits can impact the level of detectability of emotions. Some of these patterns could be due to factors such as gender or speaking style.
+
+\subsection{Limitations and Explanations}
+There are several limitations which should be taken into consideration when interpreting the results presented for the first research question. 
+Firstly, the dataset conducted and used for this study consist of spontaneous conversational semi-structured interviews. This likely has resulted in more subtle emotions than an acted dataset would contain with weaker emotional expressions reducing the detectability of different vocal markers. 
+This study has also been restricted to a small set of acoustic features for the analysis. There are possibilities other acoustic features would have contributed with relevant aspects for the analyses if included. This study does not involve all vocal features that are included in the research by Ekberg (Ekberg et al., 2023) which potentially could have shown relevant information and possible alignments, however, due to the timeframe and scope of this study only five vocal markers were chosen.
+Another important limitation to consider is the static averages of the vocal features. Despite effort where some clips have been visualized in its entirety, showing spikes in one specific emotion combined with one specific vocal feature from time to time, most clips involved in the process of answering the first research question are the result of an average per clip. This may have obscured some dynamic fluctuations of all emotions over time.
+A further constraint worth noting is that the Hume AI emotion scores are not perfect estimates of true emotional states themselves and should not be considered ground truth in this study, only a way of comparison and finding potential similarities. Additionally, although Hume showed varied and appropriate emotion outputs, it is important to note that the Hume AI emotion outputs are based on soft scoring. This often produces mixed emotions rather than single emotional states, making comparisons more difficult.
+Finally, the usage of the Swedish vocal data collected from semi-structured interviews. These interviews consist of spontaneous and conversational speech which likely do not involve as strong emotional expressions as acted datasets. Conversational speech tends to be more subtle and may have a reduced level of clear vocal markers. 
+Worth noting is that the interviews conducted for this study were context-dependent and influenced by topics selected by the participants of the interviews themselves, introducing potential additional variability from interview to interview. Contrary, the Swedish research by Ekberg (Ekberg et al., 2023) consisted of 14 repeated sentences.
+
+\subsection{Conclusion for RQ1}
+The result for the first research question has investigated if AI-based emotion recognition models align with existing research on vocal markers with a focus on the Swedish language.
+Exploring vocal markers correlation with Hume AI emotion labels as well as the correlation between vocal markers and Praat, the overall result demonstrated limited strength.
+Overall the results showed weak or moderate correlations, although some relevant patterns aligning with the existing research on Swedish vocal markers (Ekberg et al., 2023) was found.
+While the values from the Hume correlations appeared moderate at best, the Praat correlations overall showed weak correlations except some misleading numbers suggesting an over-reliance on the vocal markers pitch and HNR.
+The segment level analysis gave important insight into the fluctuations in the emotions throughout entire clips compared to an average value of the different emotions.
+
+The result indicates that while there are certain vocal features that remain relevant as indicators of emotional states, spontaneous speech presents challenges in emotion recognition. In comparison to acted datasets, emotions are more subtle with more variety and contextual dependence in spontaneous speech.
+Though there are challenges with spontaneous speech, the result suggest that AI-based emotion recognition systems such as Hume AI showed promise, demonstrating some flexibility and context-awareness.
+Future work could benefit from incorporating a wider range of vocal features, emotions and a more dynamic approaches to capture the complexity of emotional expression.
 
 
-\medskip\lipsum[1]
+\section{Result Discussion RQ2 and RQ3}
+
+\subsection{Interpretation of Results}
+\subsection{Limitations and Explanations}
+\subsection{Conclusion for RQ2 and RQ3}
 
 \section{Method Discussion}
 
+\subsection{RQ1 Methodological Considerations}
 
-\medskip\lipsum[1]
+
+\subsection{RQ2 and RQ3 Methodological Considerations}
