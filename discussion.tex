@@ -32,19 +32,24 @@ Contrary to theoretical expectations, the categorization failed to distinguish b
 
 \subsubsection{Custom Vocal Emotion Categorization Method}
 To assess the effectiveness of the custom emotion categorization function developed for this study, the outputs were compared to the Hume AI generated emotion scores.
+
 Despite individual vocal features having high correlations, the Praat-based emotion categorization function reveals significant limitations. With an average score of 0.2, the Praat based function presented minimal variability, suggesting that the function was unable to differentiate emotional expressions within the spontaneous speech obtained from the interviews.
+
 The Hume model demonstrated wider variations for the emotion scores, reflecting on a more nuanced detection of the different emotions. 
 Several factors likely contributed to this outcome as these results highlight the challenge of categorization in spontaneous speech. In real world emotional expressions, as opposed to acted ones, emotional signals are often more subtle and dependent on context. 
+
 The limited set of acoustic features may as well have excluded some important clues, further restricting the sensitivity of the function. All factors point to spontaneous speech potentially being too complex for this function.
 
 \subsubsection{ANOVA Vocal Features}
 To further investigate whether fundamental vocal features used in the previous analyses varied systematically across the five different AI-labeled emotions, an analysis of variance (ANOVA) was conducted. None of the results revealed any significant statistical differences for pitch, intensity, HNR, jitter or shimmer. This was further confirmed by Tukey HSD tests, suggesting that within the context of spontaneous speech obtained from the interviews, emotional states may not reliably be differentiated by average values of the core vocal features.
+
 Clear differences in acoustic features between emotions were reported by Ekberg (Ekberg et al., 2023), which contrasts with these findings, possibly due to the controlled nature of Ekberg’s acted dataset.
 The lack of variance for the present study likely reflects the subtle nature of emotional expressions in an interview format, being a natural conversational form of expression with some emotions possibly being interwoven with context and which may also have more variations from time to time.
 
 \subsubsection{Correlation Between Vocal Features and Hume AI Emotion Scores}
 Following the limitations identified with the rule-based emotion categorization, the analysis shifted to examining direct correlations between raw acoustic features and Hume AI’s emotion scores. 
 With a composite correlation analysis visualized, showing the two acoustic features pitch and intensity and the correlation with Pearson correlation coeﬀicients, generally weak correlations were found across all emotions. 
+
 However, some patterns aligned with established findings of Ekberg (Ekberg et al., 2023), where intensity showed a negative correlation with fear, sadness and surprise which bears some resemblance with the results of Ekberg’s study. Although pitch presented minor positive correlations with anger and fear, and happiness, these results alone suggest that average pitch and intensity alone are insufficient in capturing the complex nature of emotional expression made in spontaneous speech, as it remains too subtle. Although some expected relationships have been observed, emotions fluctuate dynamically within a clip, contributing to the difficulty of detecting consistent patterns through static averages of single features.
 
 \subsubsection{Observations from individual interviews}
@@ -54,12 +59,17 @@ These findings highlight the importance of analyzing emotions on a segment level
 Furthermore some variability across individual speakers was observed demonstrating different vocal patterns suggesting that some personal vocal traits can impact the level of detectability of emotions. Some of these patterns could be due to factors such as gender or speaking style.
 
 \subsection{Limitations and Explanations}
-There are several limitations which should be taken into consideration when interpreting the results presented for the first research question. 
+There are several limitations which should be taken into consideration when interpreting the results presented for the first research question.
+
 Firstly, the dataset conducted and used for this study consist of spontaneous conversational semi-structured interviews. This likely has resulted in more subtle emotions than an acted dataset would contain with weaker emotional expressions reducing the detectability of different vocal markers. 
 This study has also been restricted to a small set of acoustic features for the analysis. There are possibilities other acoustic features would have contributed with relevant aspects for the analyses if included. This study does not involve all vocal features that are included in the research by Ekberg (Ekberg et al., 2023) which potentially could have shown relevant information and possible alignments, however, due to the timeframe and scope of this study only five vocal markers were chosen.
+
 Another important limitation to consider is the static averages of the vocal features. Despite effort where some clips have been visualized in its entirety, showing spikes in one specific emotion combined with one specific vocal feature from time to time, most clips involved in the process of answering the first research question are the result of an average per clip. This may have obscured some dynamic fluctuations of all emotions over time.
+
 A further constraint worth noting is that the Hume AI emotion scores are not perfect estimates of true emotional states themselves and should not be considered ground truth in this study, only a way of comparison and finding potential similarities. Additionally, although Hume showed varied and appropriate emotion outputs, it is important to note that the Hume AI emotion outputs are based on soft scoring. This often produces mixed emotions rather than single emotional states, making comparisons more difficult.
+
 Finally, the usage of the Swedish vocal data collected from semi-structured interviews. These interviews consist of spontaneous and conversational speech which likely do not involve as strong emotional expressions as acted datasets. Conversational speech tends to be more subtle and may have a reduced level of clear vocal markers. 
+
 Worth noting is that the interviews conducted for this study were context-dependent and influenced by topics selected by the participants of the interviews themselves, introducing potential additional variability from interview to interview. Contrary, the Swedish research by Ekberg (Ekberg et al., 2023) consisted of 14 repeated sentences.
 
 \subsection{Conclusion for RQ1}
@@ -67,12 +77,13 @@ The result for the first research question has investigated if AI-based emotion 
 Exploring vocal markers correlation with Hume AI emotion labels as well as the correlation between vocal markers and Praat, the overall result demonstrated limited strength.
 Overall the results showed weak or moderate correlations, although some relevant patterns aligning with the existing research on Swedish vocal markers (Ekberg et al., 2023) was found.
 While the values from the Hume correlations appeared moderate at best, the Praat correlations overall showed weak correlations except some misleading numbers suggesting an over-reliance on the vocal markers pitch and HNR.
+
 The segment level analysis gave important insight into the fluctuations in the emotions throughout entire clips compared to an average value of the different emotions.
 
 The result indicates that while there are certain vocal features that remain relevant as indicators of emotional states, spontaneous speech presents challenges in emotion recognition. In comparison to acted datasets, emotions are more subtle with more variety and contextual dependence in spontaneous speech.
 Though there are challenges with spontaneous speech, the result suggest that AI-based emotion recognition systems such as Hume AI showed promise, demonstrating some flexibility and context-awareness.
-Future work could benefit from incorporating a wider range of vocal features, emotions and a more dynamic approaches to capture the complexity of emotional expression.
 
+Future work could benefit from incorporating a wider range of vocal features, emotions and a more dynamic approaches to capture the complexity of emotional expression.
 
 \section{Result Discussion RQ2 and RQ3}
 
@@ -83,6 +94,12 @@ Future work could benefit from incorporating a wider range of vocal features, em
 \section{Method Discussion}
 
 \subsection{RQ1 Methodological Considerations}
+To answer RQ1, the methodological approach involved analysis of emotional expression for vocal markers in Swedish speech in comparison to AI based emotion recognition models. The idea was to analyze emotions in a clip in its entirety and find correlations, which had some differing results, but it proved to be a notable strength to execute the analysis on a segment level to capture emotional fluctuations in a more dynamic way. Though offering another perspective, this approach introduced challenges of its own in having some inconsistent emotions not aligning completely across the segments.
 
+One of the studies chosen to compare the results with, being the existing Swedish emotion research by Ekberg (Ekberg et al., 2023) proved some similarities and patterns which provided valuable information to this study.  However, the research used pre-defined sentences, repeated by actors, which may have given a more consistent result than the dataset used in this research which consisted of interviews capturing spontaneous speech. With 16 participants, resulting in a total of 32 recordings across a diverse group of participants consisting of men and women, the age ranged from the age 23-78. The spontaneous speech and large variety of interview questions combined with dataset size may indicate some limitations for the result. A larger dataset could validate some observed patterns further and acted emotions along with repeated sentences could ensure more consistent emotions throughout the recordings.
+
+Hume AI was one of the used models and provided some advantages such as avoiding manual labeling and being pre-trained, although the Hume AI emotion scores had to be normalized and the emotions were filtered to use only the specific five emotions necessary for the comparisons in this research, which may have had some limitations on the model’s capacity. Along with working well for the research’s purpose, the model has some downsides. For example, there is limited publicly available information about functions of the model, making it difficult to fully assess possible limitations and biases.
+
+A set of basic vocal features pitch, intensity, harmonic-to-noise ratio (HNR), jitter, shimmer was extracted through Praat. These features are well established indicators of emotional expression but proved to be somewhat of a limitation which possibly could have been avoided by incorporating additional vocal features. Given that the dataset for this research consisted of interviews capturing spontaneous speech, a broader range of vocal features might have contributed in the detection of the complex vocal patterns and given a more nuanced understanding of the correlations for emotion recognition in the Swedish language.
 
 \subsection{RQ2 and RQ3 Methodological Considerations}
