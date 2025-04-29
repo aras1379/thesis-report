@@ -354,6 +354,34 @@
       \verb https://doi.org/10.1111/exsy.13701
       \endverb
     \endentry
+    \entry{Auphonic}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bc596edf66cdcd34c0294d2a077ed739}{%
+           family={Auphonic},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{fullhash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{fullhashraw}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{bibnamehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authorbibnamehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authornamehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authorfullhash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authorfullhashraw}{bc596edf66cdcd34c0294d2a077ed739}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Features}
+      \verb{urlraw}
+      \verb https://auphonic.com/features
+      \endverb
+      \verb{url}
+      \verb https://auphonic.com/features
+      \endverb
+    \endentry
     \entry{Babu2021}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=bfc56feb93ae149795aee9125da3f8e1}{%
@@ -660,42 +688,6 @@
       \verb https://doi.org/10.1038/s41562-022-01489-2
       \endverb
     \endentry
-    \entry{Bruce2017}{book}{}{}
-      \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=aa6bf7f6a1aee258ae8d689fd7dab6c0}{%
-           family={Bruce},
-           familyi={B\bibinitperiod},
-           given={P},
-           giveni={P\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=44cba7f8920f923f49b5d2a7d730e5c0}{%
-           family={Bruce},
-           familyi={B\bibinitperiod},
-           given={A},
-           giveni={A\bibinitperiod},
-           givenun=1}}%
-      }
-      \list{publisher}{1}{%
-        {O'Reilly}%
-      }
-      \strng{namehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{fullhash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{fullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{bibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authorbibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authornamehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authorfullhash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authorfullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Practical Statistics for Data Scientists}
-      \field{year}{2017}
-    \endentry
     \entry{Bryman2022}{book}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=515d9dbf4ec02046bfc61b6d854209c9}{%
@@ -820,36 +812,6 @@
       \verb{url}
       \verb https://nlpcloud.com/
       \endverb
-    \endentry
-    \entry{Cohen1977}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=90e1b93429e0013509f5a2e1f6d38806}{%
-           family={Cohen},
-           familyi={C\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Academic Press}%
-      }
-      \strng{namehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{fullhash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{fullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{bibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authorbibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authornamehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authorfullhash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authorfullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Statistical power analysis for the behavioral sciences (Revised edition)}
-      \field{year}{1977}
     \endentry
     \entry{Cowen2019}{article}{}{}
       \name{author}{5}{}{%
@@ -4136,6 +4098,34 @@
       \verb https://doi.org/10.1111/exsy.13701
       \endverb
     \endentry
+    \entry{Auphonic}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bc596edf66cdcd34c0294d2a077ed739}{%
+           family={Auphonic},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{fullhash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{fullhashraw}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{bibnamehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authorbibnamehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authornamehash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authorfullhash}{bc596edf66cdcd34c0294d2a077ed739}
+      \strng{authorfullhashraw}{bc596edf66cdcd34c0294d2a077ed739}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Features}
+      \verb{urlraw}
+      \verb https://auphonic.com/features
+      \endverb
+      \verb{url}
+      \verb https://auphonic.com/features
+      \endverb
+    \endentry
     \entry{Babu2021}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=bfc56feb93ae149795aee9125da3f8e1}{%
@@ -4442,42 +4432,6 @@
       \verb https://doi.org/10.1038/s41562-022-01489-2
       \endverb
     \endentry
-    \entry{Bruce2017}{book}{}{}
-      \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=aa6bf7f6a1aee258ae8d689fd7dab6c0}{%
-           family={Bruce},
-           familyi={B\bibinitperiod},
-           given={P},
-           giveni={P\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=44cba7f8920f923f49b5d2a7d730e5c0}{%
-           family={Bruce},
-           familyi={B\bibinitperiod},
-           given={A},
-           giveni={A\bibinitperiod},
-           givenun=1}}%
-      }
-      \list{publisher}{1}{%
-        {O'Reilly}%
-      }
-      \strng{namehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{fullhash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{fullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{bibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authorbibnamehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authornamehash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authorfullhash}{c9cd5bfea152c6a71beda2a937f633b1}
-      \strng{authorfullhashraw}{c9cd5bfea152c6a71beda2a937f633b1}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Practical Statistics for Data Scientists}
-      \field{year}{2017}
-    \endentry
     \entry{Bryman2022}{book}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=515d9dbf4ec02046bfc61b6d854209c9}{%
@@ -4602,36 +4556,6 @@
       \verb{url}
       \verb https://nlpcloud.com/
       \endverb
-    \endentry
-    \entry{Cohen1977}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=90e1b93429e0013509f5a2e1f6d38806}{%
-           family={Cohen},
-           familyi={C\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Academic Press}%
-      }
-      \strng{namehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{fullhash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{fullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{bibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authorbibnamehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authornamehash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authorfullhash}{90e1b93429e0013509f5a2e1f6d38806}
-      \strng{authorfullhashraw}{90e1b93429e0013509f5a2e1f6d38806}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Statistical power analysis for the behavioral sciences (Revised edition)}
-      \field{year}{1977}
     \endentry
     \entry{Cowen2019}{article}{}{}
       \name{author}{5}{}{%
