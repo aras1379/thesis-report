@@ -86,10 +86,87 @@ Though there are challenges with spontaneous speech, the result suggest that AI-
 Future work could benefit from incorporating a wider range of vocal features, emotions and a more dynamic approaches to capture the complexity of emotional expression.
 
 \section{Result Discussion RQ2 and RQ3}
+For the second research question in this thesis the aim was to investigate whether we could understand the emotions from textual content of the speech, with the same data as in RQ1. This was achieved by transcribing the vocal recordings and analyzing them using NLP Cloud’s emotion recognition to detect emotions in the textual content of the speech.
+
+For the third and final research question, the objective was to assess how the AI generated emotion labels obtained through the speech-based and text-based emotion recognition would compare to the self-reported emotions provided by the interviewees.
 
 \subsection{Interpretation of Results}
+\subsection{RQ2: Speech-based AI vs Text-based AI}
+In the comparison between the speech-based emotion recognition model, Hume AI, and the text-based emotion recognition model NLP Cloud, the system overall seemed to show some levels of agreement for certain emotions. Using both descriptive statistics and visual analyses to calculate the differences, an overall comparison of both ai systems showed that the mean emotion scores differ across the two models.
+The average difference in the emotion scores showed values indicating that Hume AI obtained higher scores for the emotions anger and fear, while NLP Cloud proved to show higher scores for joy, sadness and surprise. Despite these findings, the score for sadness and surprise were sufficiently low, suggesting that the models were substantially aligned on specifically those emotions.
+Joy being highly scored by NLP Cloud indicates that joy may not have been as easily identified in speech-based emotion analysis, while the textual context may have conveyed a more positive tone from the text than appeared in the voice. In contrast, anger and fear appeared to have been more effectively captured by the speech-based emotion detection, possibly suggesting that someone might sound angry or fearful even though they may not be experiencing these emotions in the moment.
+Based on the Pearson correlation analysis showing the association between the text-based and speech-based emotion recognitions, the strongest alignments were shown for Joy (r = 0.521) and anger (r = 0.468). Joy and anger also showed statistically significant p-values, where joy had a p-value of 0.0069, and anger had a p-value of 0.0022. No further strong correlations or statistically significant p-values were found in the other emotions.
+Several factors may account for this result. For example, joy and anger are distinct emotions, while sadness, fear and surprise may likely involve more subtle cues and contextual factors. Being more complex to detect may have contributed to the lower consistency across the two models for these specific emotions.
+
+For the full dataset, paired t-tests showed no significant differences for the mean score of the emotions across the dataset for all emotions except fear. Although the correlation between Hume AI and NLP Cloud showed non-significant scores for fear, the t-test indicated that while the systems do not align on detecting patterns for fear, Hume AI consistently rates the fear higher than NLP Cloud. Possible explanations for this result may reflect the differences in how emotions are conveyed and detected in the different models, whereas Hume AI possibly could have captured the more subtle vocal indicators that might not have been as easily expressed or detected in text.
+
+Examining the t-tests for the positive oriented interviews in comparison to the negative oriented interviews, notable findings emerged.
+For the positive interviews, significant differences between Hume AI and NLP Cloud were found for all emotions with the exception of surprise, where Hume consistently detected higher levels of sadness and fear and NLP on the other hand overestimated joy and anger in comparison to Hume.
+This may be explained by the complexity of emotions and emotional expression. In the positive interviews, the participants discussed joyful topics, and while this may have been detected for the text-based emotion recognition, the vocal tone could reveal more subtle cues in the tone, rhythm and pitch. For a positive interview, the participant may have a lower and more neutral tone and pitch than an actor acting out happiness, which could be one explanation for this result.
+For the negative interviews, significant differences were only identified for joy and sadness, where Hume rated joy with a higher score, and NLP rated sadness higher. This indicates a better alignment for the different models for the analyses made for the negatively oriented interviews.
+
+Possible explanations for these results are that people participating in the interviews may have used overly positive language out of politeness, even if the content of the words may have been negative.
+\subsubsection{Sentiment-Based Analysis RQ2}
+In comparing Hume AI and NLP Cloud, the sentiment-based analysis presented a distinct pattern in how the different AI models interpreted the positively oriented interviews versus the negatively oriented interviews, where some emotions were consistently rated higher than others.
+
+NLP Cloud showed patterns of consistently rating joy higher than Hume AI, while Hume rated higher for negative emotions such as anger, sadness and fear in the positive interviews.
+
+These results indicate that the subtle features such as pitch, loudness and more may have been interpreted by Hume as negative emotions even in positive conversations.
+Surprise remained a challenging emotion to detect, and NLP Cloud showed higher values of anger and sadness in the negative interviews, likely due to being able to better capture the negative context of the interviews through the text-based analysis.
+Hume rated joy unexpectedly high in the negative interviews, where a possible reason could be nervous laughter or other emotions that could have been misclassified.
+Overall, the results underscores that the two AI models differ in the job of emotion detection, possibly due to the vocal recordings involving subtly expressed emotions or possible irony or laughter that could have been incorrectly categorized as joy. 
+
+\subsection{RQ3: AI vs Self-Assessed Emotions}
+For the third and final research question the alignment with the speech-based emotion labels from Hume AI and the text-based emotion labels from NLP Cloud in combination with self-assessed emotion scores were examined. Insightful findings revealed some levels of alignment dependent on both the model and emotion.
+With an analysis showing an average of the emotion scores across the entire dataset of interviews, joy emerged as the emotion with the highest average scores. Fear and surprise showed the lowest scores out of the emotions. A visualization of the average emotion scores across all three channels shows NLP Cloud overestimating joy excessively, while Hume on the other hand overestimated anger to a certain degree.
+The rest of the emotions are relatively close in scores across the models and self-assessment scores, where sadness, fear and surprise were rated low for all channels.
+The low scores overall for sadness, fear and surprise could be explained by the spontaneous interview format in a calm setting, which may not encourage expressively conveying these emotions.
+
+For the case of joy having a substantially higher score for NLP Cloud, the model may have interpreted language as joyful even though the tone was more neutral, also possibly missing out on cues such as irony.
+Hume estimated anger higher than NLP Cloud and the interviewees themselves, which may be due to misinterpreted signs of anger for example from pitch and intensity.
+
+\subsubsection{Hume AI and NLP Cloud vs Self-Reported Emotions}
+The correlations between Hume AI and the self-reported emotions indicated very weak to modest correlations for all emotions, where only anger showed a modest statistic significant correlation with a Pearson value of r = 0.359 and p-value = 0.043. This may be due to the nature of anger which often produces a distinct vocal change typically involving increased loudness and change of pitch, while emotions like fear and surprise may often be expressed with more subtle vocal expressions which may not have been captured as successfully. Once again, the calm setting in an interview environment might also have affected the results, further muting emotional expressions. This suggest that although Hume moderately detect some emotions based on voice, a multimodal approach with further analysis might be necessary for more complex emotion recognition.
+
+The results for NLP Cloud presented statistically significant correlations for all emotions except surprise. This indicate a high degree of alignment between the self-reported emotions and the text-based emotion detection NLP Cloud, where the strongest correlations were presented in joy (r = 0.863, p = 0.0000), anger (r = 0.739, p = 0.0000), sadness (r = 0.710, p = 0.0001), and lastly fear (r = 0.669, p = 0.0003).
+This strongly indicates the effectiveness of NLP Cloud in capturing emotional content through text in combination with alignment with self-reported emotions gathered from the interviews. 
+
+Surprise being the only emotion not to show a strong correlation, emphasizes a consistent challenge observed over both models used in the study. During the self-evaluation segment of the interviews, multiple participants expressed certain confusion regarding the assessment of the emotion surprise. A large part of the interviews consisted of describing past emotional experiences which may have reduced the intensity of surprise. Typically, surprise is expressed as an immediate reaction to unexpected events and its unlikely that the interviewees are able to genuinely experience the same surprise felt in the original moment of the memory. This provides a possible explanation for why both AI models overall detected low levels of surprise, while an acted dataset could present higher correlations for this emotion.
+The statistical analysis made evident that both Hume AI and NLP Cloud showed partial alignment with the self-assessed values for some emotions. Hume AI showed a larger deviation for anger and surprise, whereas NLP Cloud deviated more for fear and joy. This suggest that the effectiveness of the AI models in emotion detection is not consistent across the emotions, although the challenging nature of self-assessing emotions, especially fear and surprise, retrospectively possibly complicates this process, effecting the results as well.
+
+
+\subsubsection{Sentiment-Based Analysis RQ3}
+In the sentiment-based analysis comparing Hume AI, NLP Cloud, and self-reported emotions insight was gained into how the AI models align with the personal perceptions of emotions.
+In the positively oriented interviews, NLP showed higher rating of joy compared to the self-assessed scores, while Hume AI consistently rated joy lower than the self-assessed scores in combination with detecting higher levels of all negative emotions (anger, sadness and fear).
+
+These results suggest that subtle vocal markers were captured by Hume that may not have matched the content.
+For surprise, NLP Cloud closely matched the scores of the self-assessment whereas Hume AI detected lower levels. This may reflect all challenges previously mentioned in regard to the emotion surprise.
+
+In the negatively oriented interviews, both fear and surprise were relatively evenly rated across all three sources, with the self-assessed being the highest rated in both emotions.
+
+The ratings for anger were high for all sources as well and fairly evenly matched between Hume and the self-assessed scores, while NLP Cloud rated anger higher. The higher rating by NLP Cloud was likely due to the context of negative wording in the negative interviews.
+Hume AI rated sadness low, while NLP Cloud was relatively close in score compared to the self-scores, suggesting the text-based model might have been better at capturing sad emotions from the vocal recordings. Hume may not have picked up the cues for sadness in the same capacity, likely due to the low expressions of sadness during the interviews. 
+Further analysis showed Hume AI rating joy higher than both NLP Cloud and the self-reported emotions in the negative interviews, likely due to misclassifications of certain vocal cues that may have been subtle or complex, for example irony which could be difficult for a speech-based AI to recognize. 
+Overall, the text-based AI NLP Cloud seems to align closer with the self-assessed scores rated by the participants of the interviews, possibly capturing the context for each interview more effectively. This underscores the limitations of relying exclusively on either speech-based or text-based emotion recognition.
+
 \subsection{Limitations and Explanations}
+This study has presented several important insights in emotion detection using AI models, although there are several limitations that should be noted.
+The spontaneous nature of the interviews remains a limitation through RQ2 and RQ3, as these vocal recordings may have given more subtle and muted emotional expressions compared to an acted dataset would. The calm setting of the interviews may also be an explanation to why fear and surprise especially was not detected to a high degree.
+
+The self-reported emotions unavoidably involve subjective biases, which possibly could have resulted in some variety across interviews. 
+The dataset size and the limited emotions remains a limitation, where a larger dataset and more emotions possibly could lead to broader findings and correlations.
+
 \subsection{Conclusion for RQ2 and RQ3}
+In answering RQ2 and RQ3, this study explored effectiveness of speech-based emotion recognition, Hume AI, text-based emotion recognition, NLP Cloud. These were later examined for potential alignments with self-assessed scores for emotions.
+For RQ2, partial agreements were found between the two AI models for some particular emotions such as joy and anger, though notable disagreements were present for fear and surprise. 
+
+This brought attention to the challenges of detecting the emotional cues for more complex emotions, where they might have more subtle cues for detection.
+In comparisons between the models, certain differences in how each model captured emotions were found.
+
+For RQ3, the comparison of the models with the self-assessed emotion scores indicated a stronger consistency for NLP Cloud than it did for Hume AI.
+Overall, surprise was presented as an emotion consistently challenging to detect across the models, possibly due to the complexity of the emotion combined with the nature of the interviews where this emotion may have been expressed the least.
+
+The results for this study suggest that a multimodal approach integrating multiple sources could enhance the precision and reliability of the detection systems for emotions, as relying on only one type of analysis may not be enough for the complexity of emotions.
 
 \section{Method Discussion}
 \subsection{RQ1 Methodological Considerations}
