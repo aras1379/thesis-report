@@ -201,6 +201,7 @@ The steps for the process consist of:
 
 
 \subsection{Interviews and Surveys}
+\label{sec:theo-interviews}
 
 The interviews involve voluntary participants engaging in short audio-recorded interviews, designed to draw out natural emotional responses. The participants will be asked questions to prompt them to recall and reflect on past experiences which encourages them to revisit emotions they felt at that time. 
 
@@ -215,3 +216,33 @@ There are many different methods for self-assessment, and emotional self-assessm
  The theories behind the interviews are stated in the possibility of detecting emotions in voices. While there are a lot of recognized emotions that can be detected in different AI models and software tools, the interview will focus on bringing out two different basic emotions to maintain a manageable scope, while ensuring ethical feasibility.
 
 Research has stated that there are different levels of unique universal signs for different affective states and while there are evidence supporting the universality for certain emotions such as anger, fear, surprise, sadness, happiness and more, there are also emotions that do not include all characteristics that distinguish them from other mental states, two examples being guilt and shame \autocite{Ekman2011}. Research of this nature supports the rationale for having the focus solely on two of the basic emotions for this thesis. The questions in the interviews will focus on bringing out two separate emotions, one on the positive spectrum, happiness, and one on the negative spectrum, anger.
+
+
+\section{Statistical Analysis}
+\label{sec:theo-stat-analyse}
+
+\subsubsection{Pearson Correlation Coefficient}
+Pearson's r is a measurement of the strength and direction of a linear relationship between two variables. The value range is from -1 to 1, where values close to 1 
+indicate a strong positive correlation, and values near -1 indicate a strong negative correlation. Values around 0 implies no linear correlation \autocite{Bruce2017}.
+
+\subsubsection{P-Value}
+A p-value indicates if the observed results have a probability of occurance by chance. A widely accepted threshold for statistical significance 
+is p < 0.05, which means there is less than a 5\% possibility that the observed effect is random \autocite{Bruce2017}. 
+
+\subsubsection{Z-score Standardization}
+Acoustic features such as pitch, intensity, jitter and shimmer can have great variation. To ensure comparability in statistical analyses, features are often standardized using Z-score standardization \autocite{Ekberg2023}.
+This method transform data to have a mean of zero and a standard deviation of one, ensuring meaningful comparisons across features. By this, a variable does not have an overly influence due to a scale of the measurement. 
+The measurements are described as "standard deviations away from the mean". \autocite{Bruce2017}. 
+
+\subsubsection{Standardized Distance for Emotion Categorization}
+Emotion categorization based on vocal features can be operated through standardized distance methods, where deviations from the baseline of acoustic profiles are quantafied. Using standardized differences allow an interpretable measure of how vocal features aligns with expected patterns for each emotion \autocite{Ekberg2023} \autocite{Bruce2017}. 
+The categorization method used in this study is a custom method inspired by this standard practice. 
+
+\subsubsection{ANOVA Tests}
+ANOVA (Analysis of Variance) is a standard statistical method used to determine if there are any significant differences in means across multiple groups {Bruce2017}. It is used to categorize grouping factors and are one method in the Swedish research for vocal markers {Ekberg2023}.  
+
+\subsubsection{Tukey's HSD}
+When ANOVA presents significant differences between group means, Tukey's HSD test is incorporated as a post analysis to identify which groups are divergent from each other. 
+This method controls for errors when making multiple comparisons \autocite{Bruce2017}. 
+\subsubsection{T-Tests and Cohen's d}
+T-tests are used to compare the means between two groups to determine statistical significance, while Cohen's d provides a standardized measure of the effect size which indicates the magnitude of the observed differences \autocite{Cohen1977} \autocite{Bruce2017}.
