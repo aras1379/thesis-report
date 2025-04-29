@@ -13,7 +13,7 @@ The study evaluates AI-generated emotion labels from speech compared with existi
 \section{Data Collection}
 The study involves participants for semi-structured interviews where they respond to predefined scenarios to provoke emotions. Ethical considerations, such as informed consent and anonymization, are followed firmly to ensure participant well-being. In the first phase, interviews are collected for analysis. 
 
-Approximately 15 Swedish speakers, primarily acquaintances to the researchers, are recruited via invitations. Interviews take place in a quiet room and last for 5-10 minutes including 2-4 scenarios that have been pilot tested for effectiveness, and breaks between the scenarios. Participants complete a self-assessment after each scenario. To minimize acted behavior, the participants are not pre-informed about the feelings that are aimed to be provoked through the scenarios.
+16 Swedish speakers, primarily acquaintances to the researchers, are recruited via invitations. Interviews take place in a quiet room and last for 5-10 minutes including 2-4 scenarios that have been pilot tested for effectiveness, and breaks between the scenarios. Participants complete a self-assessment after each scenario. To minimize acted behavior, the participants are not pre-informed about the feelings that are aimed to be provoked through the scenarios.
 
 Participants are asked open-ended questions designed to bring out previously lived through personal experiences of anger and happiness. The questions about anger are focused on previous experiences of unfair treatment and frustration, while the questions related to happiness explore moments of pride and unexpected joy. The semi-structured format allows for follow-up questions based on participant responses, to bring out as much emotion as possible.
 Although there will be a few different predefined scenarios for the participants in the interviews to choose from to maintain freedom in the participants emotional expression, two example questions for both emotions in the interview are:
@@ -27,6 +27,7 @@ Audio is recorded and analyzed using two emotion recognition models: Hume.ai to 
 The diagram in Figure~\ref{fig:pipeline} visualizes the multi-modal pipeline used in this study.  
 The interview audio files are processed through three primary channels: speech-to-text transcription via NLP Cloud,  
 Speech emotion recognition via Hume AI and acoustic feature extraction via Praat.  
+
 These channels represent two main pipelines.  
 The entities presented in yellow are prevalent in both pipelines, where the audio recordings are analyzed with Hume AI, the output is filtered to the 6 emotions analyzed in this study.  
 The pipeline illustrated in green represents the analysis to answer research question 1.  
@@ -65,17 +66,107 @@ For the third question, participants complete a self-assessment survey after eac
 
 
 \section{Data Analysis}
-To evaluate the agreement between different emotion detection methods systematically, diagrams and clustering are used to identify alignment patterns across speech-based AI, text-based AI, and self-reported emotions. The primary goal is to determine if emotion recognition from speech and text aligns with existing research on vocal markers and subjective human perception. If it does not align, the discrepancies will be categorized and analyzed. 
 
-The first step in the analysis involves manual statistical comparison of AI-generated emotion labels with expected vocal markers from Swedish emotion research. This includes alignment degree between speech-based AI emotion labels and known vocal characteristics associated with certain emotions. A high correlation would indicate what the speech-based AI model reflects established vocal emotion markers, while lower correlation suggests potential limitations in the AI’s ability to detect emotions from speech. Additionally, manual clustering is used to categorize cases where the AI model aligns, partially aligns, or diverges from vocal marker expectations.  
+To systematically evaluate the agreement between different emotion detection methods, a combination of statistical analyses and visualizations was applied for speech-based AI, text-based AI, vocal markers, and self-reported emotions. 
+The analysis aimed to assess the alignment with established vocal marker research and subjective human perception, where identification and categorization of differences where analyzed. 
 
-The second phase of the analysis assesses the relationship between speech-based and text-based AI models. Diagrams and manual clustering are used for presenting the results, due to the small data set. For cases where the models might diverge strongly, will be analyzed further to identify recurring patterns of misalignment. 
+\subsection{Statistical Analysis Approach}
+\subsubsection{RQ1: Vocal Markers vs. Speech-Based Emotion Recognition}
+The first step involved applying a custom emotion categorization function based on standardized distances from the Swedish research on vocal markers \autocite{Ekberg2023}, to cluster vocal features into emotional categories. This approach adapted 
+absolute standardized deviations across key acoustic features, as detailed in section \ref{sec:vocal-markers} and \ref{sec:theo-stat-analyse}. The Swedish research did not state their used baseline for neutral speech, therefore the baseline for this study is the average vocal features of all clips. 
 
-The third stage of analysis focuses on comparing AI-generated labels (speech \& text-based) with self-reported emotions to determine if machine-based emotion detection aligns with human self-perception. Since self-reports are inherently subjective, they are used as a reference point rather than an objective measurement. Correlations are measured to identify tendencies in alignment between AI models and 
-self-reports, and to determine whether some emotions show higher agreement than others. 
-This will indicate if specific emotions might be easier to recognize regardless of the used method. Manual clustering with diagrams is used to classify responses into full agreement, partial agreement, or divergence. This categorization provides insights about which emotions are most prone to discrepancies between AI models and human perception. 
+Following the initial clustering, correlations were calculated between: 
+\begin{itemize}
+    \item Individual vocal features and Hume AI emotion scores. 
+    \item The categorized vocal emotion scores and corresponding vocal features. 
+    \item The categorized vocal emotion scores and Hume AI emotion scores.
+\end{itemize}
+Limiations of the customized categorization method were identified during this phase and are discussed in the results. 
 
-Comparisons and clustering techniques ensure the study provides a comprehensive evaluation of AI-based emotion recognition and how it correlates to established emotional vocal markers and human perception. Statistical analytic measurements are not used due to the small data set and time frame. The approach allows interpretation of agreement and divergence between different emotion detection methods. 
+For further exploration of how vocal features varied across AI-detected emotions, one-way ANOVA tests were conducted, follwed by Tukey's HSD analysis to evaluate specifc feature differences, see \ref{sec:theo-stat-analyse} Statistic Analysis for details.  
+
+To track changes over time, each audio recording were segmented into timeframes of around 5s including Hume AI emotion scoring and vocal features for that specific segmment. These were analyzed by tracking Z-score variations, see \ref{sec:theo-stat-analyse}, in key vocal features (pitch, intensity, jitter, and shimmer) throughout each recording. 
+This enabled observation of how vocal features shifted within a single clip and to see how these changes matched Hume's emotion predictions. 
+
+\subsection{RQ2 and RQ3: Speech-Based AI vs. Text-Based AI, AI-labels vs. Self-Assessed Emotions}
+For both RQ2 and RQ3, statistical analyses were used to evaluate the alignment between AI-generated emotion scores and self-reported emotions. The following methods were applied across both research questions:
+\begin{itemize}
+    \item Pearson correlation coefficients and associated p-values for measurement both for single clips and the full dataset. 
+    \item T-tests and calculation of Cohen's d to evaluate statistical significance and effect sizes. 
+\end{itemize}
+For all statistical tests, a p-value below 0.05 was considered as statistical significant, implying that the observed correlations or differences were unlikely to have occurred by chance. 
+These statistical methods were applied to the entire dataset, and separately for negatively and positively oriented interview scenarios to identify potential contextual differences.
+For RQ2, comparisons focused on speech-based vs. text-based AI results, and RQ3 extended the comparison to include self-reported emotions as a subjective component.
+
+\subsection{Visual Analysis}
+\subsubsection{RQ1:}
+Visualizations included: 
+\begin{itemize}
+    \item Heatmaps showing correlation matrices.
+    \item Line plot diagrams for the full dataset. 
+    \item Bar chart diagrams for single clips. 
+    \item Composite correlation diagrams. 
+    \item Over-time diagrams comparing vocal features and Hume labels. 
+    \item 
+\end{itemize}
+To evaluate the performance of the custom vocal feature-based emotion categorization method, line plots and bar charts were implemented to visualize differences between the generated scores and Hume AI's predictions. 
+The line plot summerizes average emotion scores across the full dataset, while bar charts presented detailed comparisons for individual audio recordings. 
+These diagrams emphasizes deviations and alignments between the categorized vocal marker method and AI-based emotion prediction. 
+
+Composite correlation diagrams were used to explore associations between single vocal features and AI-generated emotion scores. 
+For these diagrams, Pearson correlation coefficients were calculated for each emotion and its relation to pitch and intensity, the results are visualized as grouped bar charts to easily identify positive or negative tendencies. 
+
+\subsubsection{RQ2 and RQ3:}
+Visual methods included: 
+\begin{itemize}
+    \item Difference bar charts to illustrate the average difference in Hume AI and NLP Cloud's emotion scores for each emotion category, to provide a clear view of systematic deviations. 
+    \item Grouped bar charts to present average emotion scores from both AI systems, seperated by interview sentiment (positive vs. negative), to explore variations in emotion detection depending on the interview context. 
+    \item Scatter plots (RQ3) to explore detailed relationships between AI-based emotion scores and self-reported emotions for single emotions and recordings.
+\end{itemize}
+These visualizations were integrated to support the identification of alignment patterns between the AI systems, and contributed with insights into how the modality of the AI influences emotion recognition results. 
+Python have been utilized to create all visualizations. 
+
+Given the limited dataset size and timeframe, a combination of statistical methods and visual analysis, was utilized to balance quantitative data with qualitative interpretation and support the exploratory nature of this study. 
+
+\section{Model Configuration}
+\subsection{NLP Cloud}
+\label{sec:method-nlp}
+The text-based emotion recognition is classified with NLP Clouds finetuned-llama-3-70b model
+through prompting, which allows a more flexible approach.
+Each text input uses the following prompt:
+\begin{center}
+    \begin{minipage}{0.7\textwidth} 
+    \begin{lstlisting}[language=json, caption={NLP Cloud configuration prompt.}]
+        prompt = (
+            "You are an emotion analysis system. "
+            "Given a Swedish text, respond only with a JSON object using these emotion
+            labels: "
+            "joy, surprise, fear, anger, sadness. Each value must be a float
+            between 0.0 and 1.0. "
+                "Respond with the JSON directly and nothing else.\n\n"
+                f"{text}"
+            )
+    \end{lstlisting}
+    \end{minipage}
+\end{center} 
+The prompt that is used returns a JSON response with float values ranging from 0.0 to 1.0 for each of
+the emotions with the labels “joy”, “surprise”, “fear”, “anger”, and “sadness”. This approach
+was chosen to ensure these specific emotions being analyzed due to them being the feelings of the basic
+six, which are the feelings used in the research about acoustic features in swedish speech done by
+Ekberg \autocite{Ekberg2023}. 
+
+\subsection{Hume AI}
+To ensure consistency across the different models used in this research, some changes have been
+made to adjust the output from the Hume AI model to better match the format used in NLP Cloud.
+As mentioned in chapter \ref{sec:method-nlp} NLP Cloud, NLP Cloud gives scores from 0.0 to 1.0, while Hume
+works differently. The emotion scores from Hume are given in a raw format which does not follow a
+fixed scale. Unlike NLP Cloud, the scores from Hume do not add up to 1.0, making it difficult to
+compare to NLP Cloud. As a result of this, the emotion scores from Hume have been normalized in
+this research to add up to 1.0 and allow better and simpler comparisons.
+Additionally, NLP Cloud has the feeling surprise while Hume has two different feelings for surprise,
+the two being positive surprise and negative surprise. Therefore, the scores of the two feelings of
+surprise from the Hume model have been combined in this research to give just one number that
+creates the average of the two to match the format.
 
 \section{Validity and Reliability}
 \subsection{Validity}
@@ -85,7 +176,8 @@ To ensure validity, the interview scenarios are pilot tested to ensure they prov
 To ensure reliability, standardized equipment and scenario are used to ensure replicability. Hume.ai, NLP Cloud, and Praat provide consistent measures. The AI models used in the study (Hume.ai and NLP Cloud) are pre-trained and validated emotion recognition systems. Correlation will be determined and are used to quantify the reliability of AI models in detecting emotions. The study has a replicable experimental setup, with documentation supporting replication to allow researchers to reproduce similar evaluations.  
 
 Triangulation is achieved in the study through comparison of speech AI, text AI, and self-reports which improves creditability. Any discreteness will be analyzed qualitatively to contextualize potential biases rather than assuming errors. 
-Reliability is ensured through standardization in data collection. All interviews are preprocessed to reduce background noise and normalize volume levels. The online tool Auphonic \autocite{Auphonic} is used for this, due to its simple usability for noice reduction, ability to cut out pauses and limit loudness. The same data processing steps are applied consistently for all recordings, ensuring equality in analysis. The study has a replicable experimental setup, with usage of pre-trained, publicly available APIs, and documentation supporting replication to allow researchers to reproduce similar analyses. These measures ensure that our study is generalizable within the scope or automated emotion recognition for stress analysis. 
+Reliability is ensured through standardization in data collection. All interviews are preprocessed to normalize volume levels. 
+The same data processing steps are applied consistently for all recordings, ensuring equality in analysis. The study has a replicable experimental setup, with usage of pre-trained, publicly available APIs, and documentation supporting replication to allow researchers to reproduce similar analyses. These measures ensure that our study is generalizable within the scope or automated emotion recognition for stress analysis. 
 
 \section{Considerations}
 To consider the implications of this study, several factors must be recognized. To address ethical and privacy concerns, all participant data is anonymized and securely stored to ensure privacy. The participants provide informed consent before engaging in this study. The emotion-provoking scenarios are designed to minimize distress, focusing on natural, everyday emotions rather than triggering events. The participants will have scenarios to choose from, see 2.2 Data Collection. 
