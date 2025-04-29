@@ -11,6 +11,9 @@
 \usepackage{lipsum}           % For dummy text (optional)
 \usepackage{titlesec}         % For custom chapter styles
 \usepackage{float}  % Allows the [H] float placement specifier
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage[table,xcdraw]{xcolor}
 
 % Font settings
 \defaultfontfeatures{Ligatures=TeX}
@@ -29,6 +32,24 @@
 \title{new-thesis-sj}
 \author{Sara Ljung}
 \date{April 2025}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinelanguage{json}{
+    morestring=[b]",
+    morecomment=[l]{//},
+    morekeywords={true,false,null},
+    sensitive=false
+}
+
+\lstset{
+    language=json,
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10}
+}
 
 \begin{document}
 \pagenumbering{arabic}
